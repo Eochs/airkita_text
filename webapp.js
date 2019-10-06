@@ -58,7 +58,7 @@ app.use(function(request, response, next) {
 });
 
 // Mount middleware to notify Twilio of errors
-app.use(twilioNotifications.notifyOnError);
+app.use(twilioNotifications.notifyOnHighVtoc);
 
 // Handle Errors
 app.use(function(err, request, response, next) {
