@@ -2,11 +2,9 @@ var twilioClient = require('../twilioClient');
 var fs = require('fs');
 var admins = require('../config/administrators.json');
 
-function formatMessage(errorToReport) {
-  return '[This is a test] ALERT! It appears the server is' +
-    'having issues. Exception: ' + errorToReport +
-    '. Go to: http://newrelic.com ' +
-    'for more details.';
+function formatMessage(airToReport) {
+  return '\n🐕 Bark! Bark! 🐕 \nAirkita says: Danger! Air quality is reaching dangerous levels!' +
+    'ppm: ' + airToReport;
 };
 
 exports.notifyOnError = function(appError, request, response, next) {
